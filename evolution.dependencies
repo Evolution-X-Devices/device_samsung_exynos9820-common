@@ -36,7 +36,9 @@
         "target_path": "vendor/samsung/exynos9820-common"
     },
     {
-        "repository": "kernel_samsung_exynos9820",
-        "target_path": "kernel/samsung/exynos9820"
+        "repository": "ProjectMatrixx-exynos9820/android_kernel_samsung_exynos9820",
+        "target_path": "kernel/samsung/exynos9820",
+        "branch": "kernelsu",
+        "remote": "github"
     }
 ]
