@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "CarrierConfigResExynos9820Common",
+    product_specific: true,
+    resource_dirs: ["res"],
+}

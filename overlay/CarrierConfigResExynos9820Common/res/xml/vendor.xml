@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carrier_config_list>
+    <carrier_config>
+        <!-- Expose WFC. Carrier-specific policy still belongs in CarrierConfig. -->
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+
+        <!-- Avoid the AES-XCBC-96 Child-SA proposal crash seen by AOSP IWLAN. -->
+        <int-array name="iwlan.supported_integrity_algorithms_int_array" num="4">
+            <item value="2" />
+            <item value="12" />
+            <item value="13" />
+            <item value="14" />
+        </int-array>
+
+        <!-- The legacy Samsung data HAL cannot perform seamless IMS handover. -->
+        <boolean name="delay_ims_tear_down_until_call_end_bool" value="true" />
+        <string-array name="iwlan_handover_policy_string_array" num="5">
+            <item value="source=EUTRAN|NGRAN, target=IWLAN, type=disallowed, capabilities=IMS|EIMS" />
+            <item value="source=IWLAN, target=EUTRAN|NGRAN, type=disallowed, capabilities=IMS|EIMS" />
+            <item value="source=IWLAN, target=GERAN|UTRAN, type=disallowed" />
+            <item value="source=GERAN|UTRAN, target=IWLAN, type=disallowed" />
+            <item value="source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=allowed" />
+        </string-array>
+    </carrier_config>
+</carrier_config_list>

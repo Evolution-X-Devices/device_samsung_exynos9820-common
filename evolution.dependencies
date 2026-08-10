@@ -44,5 +44,29 @@
     {
         "repository": "kernel_samsung_exynos9820",
         "target_path": "kernel/samsung/exynos9820"
+    },
+    {
+        "remote": "github-non-los",
+        "repository": "krazey/ims",
+        "target_path": "packages/apps/PhhIms",
+        "revision": "a3fec01ebc4f51c39026565c4a451fef454637fa"
+    },
+    {
+        "remote": "github-non-los",
+        "repository": "amikhasenko/rnnoise",
+        "target_path": "packages/apps/PhhIms/app/jni/rnnoise",
+        "revision": "f94e734aa504e34100516c7d486cf69fc4174f00"
+    },
+    {
+        "remote": "github-non-los",
+        "repository": "ewan-xu/AEC3",
+        "target_path": "packages/apps/PhhIms/app/jni/webrtc-aec3",
+        "revision": "6b11f0f31cd10f6bf68025ccad771f545d87dbce"
+    },
+    {
+        "remote": "github-non-los",
+        "repository": "abseil/abseil-cpp",
+        "target_path": "packages/apps/PhhIms/app/jni/webrtc-aec3/base/abseil",
+        "revision": "852fc61f31b3d68df58ba6a167dff73fee04558f"
     }
 ]

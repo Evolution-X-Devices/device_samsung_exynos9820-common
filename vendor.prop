@@ -77,6 +77,11 @@ vendor.powerhal.disp.idle_support=false
 ## RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 
+## IMS bring-up overrides
+persist.dbg.volte_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.dbg.allow_ims_off=1
+
 ## Samsung specific
 ro.product_ship=true
 # Set csc support in OMX
